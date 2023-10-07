@@ -1,0 +1,14 @@
+VIRTUAL REALITY
+bed: https://sketchfab.com/3d-models/bed-679c0f112f894623917b0599e9bb9d17https://sketchfab.com/3d-models/bed-679c0f112f894623917b0599e9bb9d17
+desk: https://sketchfab.com/3d-models/desk-asset-ca972bf129344a73a3fe59a0eef78164
+chair: https://sketchfab.com/3d-models/office-chair-41973aa1808d4a13b84c24497fc77c63
+wardrobe: https://sketchfab.com/3d-models/wardrobe-e48bb01993c7464ea09a02465c87d25d
+window: https://sketchfab.com/3d-models/old-wooden-window-9cb47e9d4e8644efa4fa28c424253d79#download
+door: https://sketchfab.com/3d-models/door-d23ec435af454cf985292778dbd65c9e#download
+bookshelf: https://sketchfab.com/3d-models/cc0-bookshelf-with-books-961af2daa6344e4fba0c7a4c92ff91f8
+lamp: https://sketchfab.com/3d-models/neon-cactus-lamp-bb8202ecfd7b4b3496bf280a50757449
+led: https://sketchfab.com/3d-models/neon-9f42506937d24c6eb5ce3ae16c376f05
+
+material: https://polyhaven.com/a/dark_wood
+		https://polyhaven.com/a/concrete_wall_006
+

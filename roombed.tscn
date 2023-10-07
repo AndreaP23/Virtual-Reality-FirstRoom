@@ -1,0 +1,129 @@
+[gd_scene load_steps=21 format=3 uid="uid://6ajd6n4e252r"]
+
+[ext_resource type="Texture2D" uid="uid://bv828esevnyen" path="res://Models/material/wood_table_worn_diff_4k.jpg" id="1_u0hhx"]
+[ext_resource type="Texture2D" uid="uid://ccm3d4wo1e72i" path="res://Models/material/concrete_wall_006_diff_4k.jpg" id="6_1a77h"]
+[ext_resource type="PackedScene" uid="uid://ynocputm2n0j" path="res://prefabs/neon_cactus_lamp.tscn" id="8_ttu8k"]
+[ext_resource type="PackedScene" uid="uid://d0ogwevc0wgyd" path="res://prefabs/wardrobe.tscn" id="9_1wb5w"]
+[ext_resource type="PackedScene" uid="uid://dp57pbrxulexc" path="res://prefabs/desk_asset.tscn" id="9_2ykpw"]
+[ext_resource type="PackedScene" uid="uid://b6cg7du2roluu" path="res://prefabs/office_chair.tscn" id="9_318i3"]
+[ext_resource type="PackedScene" uid="uid://cgt1381wd4ipe" path="res://prefabs/bed.tscn" id="9_b333b"]
+[ext_resource type="PackedScene" uid="uid://cnqmvj3p7jvik" path="res://prefabs/door.tscn" id="10_8d7el"]
+[ext_resource type="PackedScene" uid="uid://o2yaff2s4ay4" path="res://prefabs/old_wooden_window.tscn" id="10_kfor3"]
+[ext_resource type="PackedScene" uid="uid://bbeg2p8go2n68" path="res://prefabs/cc_0_bookshelf_with_books.tscn" id="10_x6ink"]
+[ext_resource type="PackedScene" uid="uid://b3rl4qdxwdfne" path="res://Models/led/neon.glb" id="11_708jx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3h1p"]
+albedo_texture = ExtResource("6_1a77h")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uyikr"]
+size = Vector3(0.2, 2.5, 7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jns2"]
+albedo_texture = ExtResource("6_1a77h")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8nwii"]
+size = Vector3(0.2, 2.5, 7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sa65k"]
+albedo_texture = ExtResource("6_1a77h")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ssrdb"]
+size = Vector3(0.2, 2.5, 7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yhne"]
+albedo_texture = ExtResource("1_u0hhx")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1aa2g"]
+size = Vector3(5, 0.3, 7)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m17a6"]
+radius = 0.1
+
+[node name="Node3D" type="Node3D"]
+
+[node name="wall1" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61645, 1.17853, 0.06528)
+size = Vector3(0.2, 2.5, 7)
+material = SubResource("StandardMaterial3D_x3h1p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall1/StaticBody3D"]
+shape = SubResource("BoxShape3D_uyikr")
+
+[node name="wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6528, 1.11282, 0.0958176)
+size = Vector3(0.2, 2.5, 7)
+material = SubResource("StandardMaterial3D_2jns2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall2/StaticBody3D"]
+shape = SubResource("BoxShape3D_8nwii")
+
+[node name="wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0956962, 1.16173, 3.56938)
+size = Vector3(5.3, 2.5, 0.2)
+material = SubResource("StandardMaterial3D_sa65k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7184, -0.198292, -3.33118)
+shape = SubResource("BoxShape3D_ssrdb")
+
+[node name="floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+size = Vector3(5, 0.2, 7)
+material = SubResource("StandardMaterial3D_8yhne")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_1aa2g")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -9.36214e-15, -8.74228e-08, -3.74036e-08, 0.903851, 0.427847, 7.90172e-08, 0.427847, -0.903851, 0.524749, 2.55162, -3.87889)
+fov = 84.375
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.153297, 0.98818, 0, -0.98818, -0.153297, 0, 4.87575, -0.431858)
+light_color = Color(1, 0.921569, 1, 1)
+
+[node name="wardrobe" parent="." instance=ExtResource("9_1wb5w")]
+transform = Transform3D(1.19249e-10, -3.48787e-18, -0.01, 3.48787e-18, 0.01, -3.48787e-18, 0.01, -3.48787e-18, 1.19249e-10, 2.11539, 0.0982494, -0.776063)
+
+[node name="office_chair" parent="." instance=ExtResource("9_318i3")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 1.26258, 0.285335, 2.76087)
+
+[node name="sphere" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78962, 4.24464, -1.36948)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sphere"]
+shape = SubResource("SphereShape3D_m17a6")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="sphere"]
+radius = 0.1
+radial_segments = 32
+rings = 16
+
+[node name="desk_asset" parent="." instance=ExtResource("9_2ykpw")]
+transform = Transform3D(1.19249e-10, -3.48787e-18, -0.01, 3.48787e-18, 0.01, -3.48787e-18, 0.01, -3.48787e-18, 1.19249e-10, 1.2955, 0.467351, 1.99967)
+
+[node name="neon_cactus_lamp" parent="." instance=ExtResource("8_ttu8k")]
+transform = Transform3D(-8.74228e-08, 6.97574e-16, 2, 6.97574e-16, 2, -6.97574e-16, -2, 6.97574e-16, -8.74228e-08, 2.15915, 0.877246, -1.88103)
+
+[node name="bed" parent="." instance=ExtResource("9_b333b")]
+transform = Transform3D(-4.37114e-10, 3.48787e-18, 0.01, 3.48787e-18, 0.01, -3.48787e-18, -0.01, 3.48787e-18, -4.37114e-10, -1.34023, 0.15, -0.427186)
+
+[node name="cc0_bookshelf_with_books" parent="." instance=ExtResource("10_x6ink")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -1.14369, 0.15, 3.00304)
+
+[node name="door" parent="." instance=ExtResource("10_8d7el")]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 2.43652, 1.06777, -2.61835)
+
+[node name="old_wooden_window" parent="." instance=ExtResource("10_kfor3")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 1.50311, 1.51226, 3.45259)
+
+[node name="neon" parent="." instance=ExtResource("11_708jx")]
+transform = Transform3D(-1.09278e-08, 8.71967e-17, 0.25, 8.71967e-17, 0.25, -8.71967e-17, -0.25, 8.71967e-17, -1.09278e-08, -2.8103, -0.84936, -1.2348)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnqmvj3p7jvik"]
+
+[ext_resource type="PackedScene" uid="uid://bnvl0lh50hyvw" path="res://Models/door/door.glb" id="1_o64mc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n7cwn"]
+points = PackedVector3Array(0.0995984, 0.451632, -0.133295, -0.0848583, 0.304092, -1.12921, 0.0258107, 0.304092, -1.12921, -0.121714, 0.304092, 1.23141, -0.121714, 0.599171, -1.12921, 0.0626919, 0.599171, 1.23141, 0.0626919, 0.304092, 1.23141, -0.121714, 0.599171, 1.23141, 0.0626919, 0.599171, -1.12921, -0.158646, 0.341006, -0.207007, 0.0995984, 0.341006, -0.207007, -0.158646, 0.451632, -0.133295, 0.0626919, 0.451632, -1.12921, -0.121714, 0.451632, -1.12921, -0.158646, 0.414776, -0.243748, 0.0995984, 0.414776, -0.243748, -0.158646, 0.341006, -0.133295, 0.0995984, 0.341006, -0.133295, 0.0626919, 0.304092, 1.08376, -0.121714, 0.304092, 1.08376, -0.158646, 0.451632, -0.207007, 0.0995984, 0.451632, -0.207007)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_melsh"]
+points = PackedVector3Array(0.0626883, 0.304063, 1.23141, -0.121736, -0.581346, -1.12921, 0.0626883, -0.581346, -1.12921, -0.121736, -0.581346, 1.23141, -0.0848366, 0.304063, -1.12921, -0.121736, 0.304063, 1.23141, 0.0626883, -0.581346, 1.23141, 0.025789, 0.304063, -1.12921, 0.0626883, -0.433749, -1.12921, -0.121736, -0.433749, -1.12921, 0.0626883, 0.304063, 1.08376, -0.121736, 0.304063, 1.08376)
+
+[node name="door" instance=ExtResource("1_o64mc")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="@CollisionShape3D@20081" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(100, 0, 0, 0, -1.62921e-05, 100, 0, -100, -1.62921e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_n7cwn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(100, 0, 0, 0, -1.62921e-05, 100, 0, -100, -1.62921e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_melsh")
